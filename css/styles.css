@@ -754,6 +754,11 @@ input {
   opacity: 0;
   pointer-events: none;
 }
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
 .modal {
   position: absolute;
   top: 50%;
@@ -761,11 +766,12 @@ input {
   transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
-  padding: 15px;
+  /*padding: 40px;*/
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  text-align: center;
 }
 .modal-close {
   position: absolute;
@@ -786,6 +792,159 @@ input {
   justify-content: center;
   align-items: center;
   fill: var(--black-color);
+  transition: fill var(--timing-function);
+}
+.icon-svg:hover,
+.icon-svg:focus {
+  fill: var(--second-accent-color);
+}
+.modal-title {
+  display: block;
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.modal-label {
+  position: relative;
+  display: block;
+  margin: 0 0 10px 0;
+  padding-top: 18px;
+  width: 100%;
+}
+.comment-label {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-top: 18px;
+  width: 100%;
+}
+
+.modal-label input {
+  margin-top: 4px;
+  padding: 12px 0 12px 42px;
+  width: 100%;
+  border: 2px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  outline-color: transparent;
+  transition: var(--timing-function);
+}
+.modal-svg {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  top: 50%;
+  fill: var(--black-color);
+  transition: fill var(--timing-function);
+}
+
+.span-title {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+.area-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+.textarea {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  border: 2px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  outline-color: transparent;
+  transition: var(--timing-function);
+}
+.textarea-label::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.submit-btn {
+  width: 200px;
+  height: 50px;
+  margin-left: 124px;
+}
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin: 0 12px 30px;
+}
+
+.form-input:focus ~ .modal-svg,
+.form-input:hover ~ .modal-svg {
+  fill: var(--second-accent-color);
+}
+
+.modal-label input:focus,
+.comment-label .textarea:focus,
+.modal-label input:hover,
+.comment-label .textarea:hover {
+  border: 2px solid var(--second-accent-color);
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  margin-top: 4px;
+  background-image: url(../images/Vector2.svg);
+}
+.modal-checkbox:checked + .checkbox-icon {
+  background-color: var(--second-accent-color);
+  background-image: url(../images/iconcheckbox.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: var(--timing-function);
+}
+/*.check-box {
+  position: absolute;
+  background-image: url(../images/Vector2.svg);
+  width: 16px;
+  height: 15px;
+  left: 30px;
+}*/
+.modal-checkbox {
+  appearance: none;
+  position: absolute;
+  /*width: 16px;
+  height: 15px;
+  fill: var(--black-color);
+  margin-right: 8px;
+  margin-top: 7px;*/
+}
+
+.modal-link {
+  color: var(--second-accent-color);
+  text-decoration: underline;
 }
 
 /* Стили для portfolio.html */
@@ -934,3 +1093,42 @@ input {
 .projects-link:focus .img-title {
   transform: translateY(-100%);
 }
+
+/*.checkbox {
+  position: relative;
+  width: calc(100% - 23px);
+  padding: 0;
+  margin: 0 11px 30px 12px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+/* стиль "нечекнутый чекбокс" */
+/* .icon-checkbox */
+/*.checkbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 15px;
+  
+  transform: translateY(-50%);
+  border: 2px solid var(--box-shadow-color);
+  border-radius: 4px;
+}
+.input-hidden:checked + .checkbox::after {
+  background-image: url("../images/icon\ check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: var(--second-accent-color);
+  border-color: var(--second-accent-color);
+}*/
