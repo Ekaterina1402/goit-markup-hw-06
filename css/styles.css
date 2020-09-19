@@ -22,6 +22,7 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .container {
@@ -427,7 +428,6 @@ img {
 /* Team */
 .team {
   background-color: var(--third-background-color);
-  padding-right: 0;
 }
 
 .team-item {
@@ -582,12 +582,12 @@ img {
 }
 .addr-conteiner {
   width: 231px;
-  margin-right: 65px;
+  margin-right: 70px;
 }
 .icons-container {
   width: 206px;
   align-content: flex-start;
-  margin-right: 90px;
+  margin-right: 93px;
 }
 .footer-addr {
   color: var(--accent-color);
@@ -639,9 +639,6 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--second-background-color);
-}
-.footer-div {
-  padding-left: 55px;
 }
 
 .logo-footer {
@@ -733,6 +730,7 @@ input {
   padding-right: 29px;
   border: none;
   border-radius: 4px;
+  height: 50px;
 }
 .icon-email {
   width: 22px;
@@ -813,6 +811,7 @@ input {
   margin: 0 0 10px 0;
   padding-top: 18px;
   width: 100%;
+  font-size: 12px;
 }
 .comment-label {
   position: relative;
@@ -826,6 +825,7 @@ input {
   margin-top: 4px;
   padding: 12px 0 12px 42px;
   width: 100%;
+  height: 40px;
   border: 2px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 14px;
@@ -851,6 +851,7 @@ input {
   left: 0;
   top: 0;
   margin: 0;
+  font-size: 12px;
 }
 textarea {
   resize: none;
@@ -868,6 +869,7 @@ textarea {
   margin-bottom: 20px;
   padding: 12px 16px;
   width: 100%;
+  height: 120px;
   border: 2px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 14px;
@@ -928,13 +930,7 @@ textarea {
   border-radius: 4px;
   transition: var(--timing-function);
 }
-/*.check-box {
-  position: absolute;
-  background-image: url(../images/Vector2.svg);
-  width: 16px;
-  height: 15px;
-  left: 30px;
-}*/
+
 .modal-checkbox {
   appearance: none;
   position: absolute;
@@ -1096,42 +1092,3 @@ textarea {
 .projects-link:focus .img-title {
   transform: translateY(-100%);
 }
-
-/*.checkbox {
-  position: relative;
-  width: calc(100% - 23px);
-  padding: 0;
-  margin: 0 11px 30px 12px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-/* стиль "нечекнутый чекбокс" */
-/* .icon-checkbox */
-/*.checkbox::after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-  top: 50%;
-  width: 16px;
-  height: 15px;
-  
-  transform: translateY(-50%);
-  border: 2px solid var(--box-shadow-color);
-  border-radius: 4px;
-}
-.input-hidden:checked + .checkbox::after {
-  background-image: url("../images/icon\ check.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-color: var(--second-accent-color);
-  border-color: var(--second-accent-color);
-}*/
