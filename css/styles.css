@@ -689,7 +689,7 @@ img {
   text-transform: uppercase;
   color: var(--accent-color);
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 input {
