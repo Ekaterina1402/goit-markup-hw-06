@@ -580,6 +580,9 @@ img {
   display: block;
   width: calc((100% - 30px * 3) / 4);
 }
+.email-container {
+  width: 570px;
+}
 .addr-conteiner {
   width: 231px;
   margin-right: 70px;
@@ -689,7 +692,7 @@ img {
   text-transform: uppercase;
   color: var(--accent-color);
   margin-top: 12px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -845,7 +848,7 @@ input {
   transition: fill var(--timing-function);
 }
 
-.span-title {
+.label-title {
   position: absolute;
   display: block;
   left: 0;
@@ -853,6 +856,7 @@ input {
   margin: 0;
   font-size: 12px;
 }
+
 textarea {
   resize: none;
 }
