@@ -118,8 +118,8 @@ ul {
 }
 /*Overlay*/
 .overlay {
-  min-width: 1600px;
-  min-height: 600px;
+  width: 1600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid black;
@@ -698,10 +698,12 @@ img {
 input {
   height: 50px;
 }
+
 .footer-flex {
   display: flex;
   flex-direction: row;
 }
+
 .input-submit {
   padding-left: 16px;
   margin-right: 12px;
@@ -712,20 +714,7 @@ input {
   background-color: var(--secondary-bck-color);
   color: var(--accent-rgba-color);
 }
-/*.button-submit {
-  min-width: 200px;
-  box-sizing: border-box;
-  padding: 10px 32px;
-  border-style: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--accent-color);
-  background-color: var(--second-accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: center;
-}*/
+
 .btn {
   display: flex;
   align-items: center;
